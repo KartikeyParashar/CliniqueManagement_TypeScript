@@ -1,0 +1,18 @@
+"use strict";
+exports.__esModule = true;
+var doctorsData_1 = require("./doctorsData");
+console.log("-----------------------------Welcome to the Typescript Clinic's and Research Centre---------------------------");
+console.log("");
+console.log("-----------------------------We are specialized in " + doctorsData_1["default"][0].specialization + "---------------------------");
+console.log("");
+console.log("We have other specialist as well! Please checkout the List and take an appointment as per the timings!");
+console.log("");
+console.log('S.No.----"Doctors Name"----------------------"Specialization"-------------"Availability"');
+console.log("");
+console.log("1.--------" + doctorsData_1["default"][0].name + "-------------------------  " + doctorsData_1["default"][0].specialization + "--------------------" + doctorsData_1["default"][0].availability);
+console.log("2.--------" + doctorsData_1["default"][1].name + "-------------------------  " + doctorsData_1["default"][1].specialization + "---------------------" + doctorsData_1["default"][1].availability);
+console.log("3.--------" + doctorsData_1["default"][2].name + "-------------------------" + doctorsData_1["default"][2].specialization + "-----------------" + doctorsData_1["default"][2].availability);
+console.log("4.--------" + doctorsData_1["default"][3].name + "-------------------" + doctorsData_1["default"][3].specialization + "------------" + doctorsData_1["default"][3].availability);
+console.log("5.--------" + doctorsData_1["default"][4].name + "--------------------------- " + doctorsData_1["default"][4].specialization + "-------------------" + doctorsData_1["default"][4].availability);
+console.log("");
+console.log("------Please Select an Option, of which doctor you want an appointment");
