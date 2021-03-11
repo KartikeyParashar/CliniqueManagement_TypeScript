@@ -16,6 +16,35 @@ class ShowData{
             count = count + 1;
         }
     }
+
+    patientReport = (doctorId: number, patientId: number) => {
+        var doctorName = "";
+        var patientName = "";
+
+        for (let ele of doctorsData) {
+            if (ele.id == doctorId) 
+            {
+                doctorName = ele.name;
+                break;
+            }
+        } 
+
+        for (let ele of patientData) {
+            if (ele.id == patientId) 
+            {
+                patientName = ele.name;
+                break;
+            }
+        } 
+
+        console.log("");
+        console.log("----------------Patient Report-----------");
+        console.log("Report Number : 8745387587");
+        console.log(`Doctor Name : ${doctorName}`);
+        console.log(`Patient Name : ${patientName}`);
+        console.log("Date: May 23, 2021");
+        console.log("Reviewed by: EMC Manager");
+    }
 }
     
 
@@ -39,5 +68,8 @@ showData.patientDetails();
 console.log("------Please Select an Option, of which doctor you want an appointment-----");
 
 var selectedOptionForDoctor: number = 1; 
+var selectedOptionForPatient: number = 4;
+
+showData.patientReport(selectedOptionForDoctor, selectedOptionForPatient);
 
 
