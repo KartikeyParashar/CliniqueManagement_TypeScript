@@ -1,18 +1,37 @@
 "use strict";
 exports.__esModule = true;
 var doctorsData_1 = require("./doctorsData");
+var patientData_1 = require("./patientData");
+var ShowData = /** @class */ (function () {
+    function ShowData() {
+        this.doctorsDetails = function () {
+            for (var _i = 0, doctorsData_2 = doctorsData_1["default"]; _i < doctorsData_2.length; _i++) {
+                var ele = doctorsData_2[_i];
+                console.log(ele.id + ")  Dr." + ele.name + "  specialized in " + ele.specialization + ", available in " + ele.availability);
+            }
+        };
+        this.patientDetails = function () {
+            for (var _i = 0, patientData_2 = patientData_1["default"]; _i < patientData_2.length; _i++) {
+                var ele = patientData_2[_i];
+                var count = 1;
+                console.log(ele.id + ")  Mr." + ele.name + "  ContactInfo:" + ele.mobileNumber);
+                count = count + 1;
+            }
+        };
+    }
+    return ShowData;
+}());
+var showData = new ShowData();
 console.log("-----------------------------Welcome to the Typescript Clinic's and Research Centre---------------------------");
 console.log("");
 console.log("-----------------------------We are specialized in " + doctorsData_1["default"][0].specialization + "---------------------------");
 console.log("");
 console.log("We have other specialist as well! Please checkout the List and take an appointment as per the timings!");
 console.log("");
-console.log('S.No.----"Doctors Name"----------------------"Specialization"-------------"Availability"');
+showData.doctorsDetails();
 console.log("");
-console.log("1.--------" + doctorsData_1["default"][0].name + "-------------------------  " + doctorsData_1["default"][0].specialization + "--------------------" + doctorsData_1["default"][0].availability);
-console.log("2.--------" + doctorsData_1["default"][1].name + "-------------------------  " + doctorsData_1["default"][1].specialization + "---------------------" + doctorsData_1["default"][1].availability);
-console.log("3.--------" + doctorsData_1["default"][2].name + "-------------------------" + doctorsData_1["default"][2].specialization + "-----------------" + doctorsData_1["default"][2].availability);
-console.log("4.--------" + doctorsData_1["default"][3].name + "-------------------" + doctorsData_1["default"][3].specialization + "------------" + doctorsData_1["default"][3].availability);
-console.log("5.--------" + doctorsData_1["default"][4].name + "--------------------------- " + doctorsData_1["default"][4].specialization + "-------------------" + doctorsData_1["default"][4].availability);
 console.log("");
-console.log("------Please Select an Option, of which doctor you want an appointment");
+console.log("----------------------Patient Data-------------------------");
+showData.patientDetails();
+console.log("------Please Select an Option, of which doctor you want an appointment-----");
+var selectedOptionForDoctor = 1;
